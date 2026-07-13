@@ -181,7 +181,7 @@ a{text-decoration:none;color:#000;font-weight:600}
 .bouton-devis1:hover,.f-bg-form button:hover{background-color:#ffa929}
 .f-bg{position:relative;display:flex;width:100%;background-color: rgba(0, 0, 0, 0.6);}.form-background{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;opacity: 0.9;}.f-bg-form{display:flex;flex-direction:column;align-items:center;margin:5% auto;width:60%;padding:20px;}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}.f-bg-form h2{color:#ffffff;font-weight:600;font-size:33px;margin-top:0;margin-bottom:8%}.f-bg-form h3{margin-top:-5%;margin-bottom:5%}.f-bg-form input,.f-bg-form select{width:100%;height:45px;padding:13px 5px 13px 13px;margin-bottom:4%;box-sizing:border-box;border:1px solid #333;background-color:#f2f2f2;color:#000;border-radius:15px;}.f-bg-form input::placeholder,.f-bg-form textarea::placeholder{font-size:19px;color:#383838}.f-bg-form textarea{width:100%;height:100px;padding-left:13px;padding-top:13px;border:1px solid #333;background-color:#f2f2f2;border-radius:15px}.f-bg-form button{display:flex;justify-content:center;color:#fff;padding:10px 100px;font-size:18px;margin-top: 8%;margin-left: auto;margin-right: auto;border:solid 1px #fff;border-radius:4px;cursor:pointer;background-color: #000;}.f-bg-form button:hover{background-color:#ffa929}
 .liens-wp a,.liens-wp h5{font-size:13px;color:#000;text-align:center;font-weight:300;margin-top:3%;margin-bottom: -2%;}
-.tel-x,.mobile-s,.r-mobile{display:none}
+.mobile-s,.r-mobile{display:none}
 
 
 .accueil {
@@ -730,8 +730,6 @@ body{margin-top:18%}
 #contact{padding-top:4%;padding-bottom:4%;margin-top:0}
 #contact h4{margin-top:6%;margin-bottom:3%;font-weight:600}
 #contact p{text-align:center;margin:0 0 3%;font-size:15px}
-.tel-x{display:flex;position:fixed;padding:1% 2%;background-color:#11311a;right:4%;bottom:5%;border-radius:20px}
-.tel-x a{font-size:18px;font-weight:500;color:#fff;text-decoration:none}
 .liens-wp a,.liens-wp h5{font-size:13px;text-align:center;font-weight:300;margin-top:5%}
 .liens-wp{margin-bottom:-3%}
 .f-bg{display:flex;justify-content:center;align-items:center;width:100%;margin-top: 5%;}.f-bg-form{display:flex;align-items:center;margin:5% auto;width:90%;color:#fff}.f-bg-form h2{margin:1% 1% 12%;font-size:30px}.f-bg-form label{display:block;margin-bottom:8px;font-size:20px}.f-bg-form input,.f-bg-form select{width:100%;height:35px;padding:8px 8px 8px 15px;margin-bottom:8%;box-sizing:border-box;}.f-bg-form input::placeholder,.f-bg-form textarea::placeholder{font-size:17px;color:#323232}.f-bg-form textarea{width:100%;height:100px;padding-left:15px;padding-top:8px;background-color:#f2f2f2}.f-bg-form button{display:flex;justify-content:center;padding:10px 40px;font-size:18px;margin-top: 10%;border-radius:5px;cursor:pointer}.f-bg-form button:active{background-color:#ffa929}
@@ -1015,4 +1013,18 @@ label {
     .faq-toggle:checked ~ .faq-answer {
         padding: 18px 15px;
     }
+}
+/* ===== Bottom navigation mobile ===== */
+.bottom-nav{display:none;position:fixed;bottom:10px;left:10px;right:10px;box-sizing:border-box;justify-content:space-around;align-items:center;background:#11311a;border-radius:22px;box-shadow:0 -4px 20px rgba(0,0,0,.5),0 0 30px rgba(0,0,0,.25);z-index:1000;padding:6px 0}
+.bottom-nav-item{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;min-width:0;padding:4px 2px;text-decoration:none;color:#fff;transition:transform .3s ease}
+.bottom-nav-item:hover,.bottom-nav-item:active{transform:translateY(-2px)}
+.bottom-nav-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-bottom:3px;background:#fff;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,.25);transition:transform .3s ease}
+.bottom-nav-item:hover .bottom-nav-icon{transform:scale(1.08)}
+.bottom-nav-icon svg{width:22px;height:22px;stroke:#487613;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.bottom-nav-label{font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.02em;color:#fff;margin:0}
+.bottom-nav-call .bottom-nav-icon{background:#ffa929}
+.bottom-nav-call .bottom-nav-icon svg{stroke:none;fill:#fff}
+@media screen and (max-width:767.98px){
+.bottom-nav{display:flex}
+#contact{padding-bottom:95px}
 }
