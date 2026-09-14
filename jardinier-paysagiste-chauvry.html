@@ -556,15 +556,12 @@
                 class="form-background" width="600" height="600">
             <div class="f-bg-form">
                 <h2>Contactez-nous</h2>
-                <form id="contactForm" action="https://formsubmit.co/renovexterieur@yahoo.com" method="POST" onsubmit="return sendBoth(event)">
+                <form id="contactForm" action="https://webprime.app/webhook/contact/91c90f1d6c8f857b13c8260ff03114be77b7caba134ebf08d76519a4d4e6775b" method="POST" onsubmit="return sendBoth(event)">
                     <!-- Honeypot anti-spam -->
                     <div class="hp-wrap">
                         <label for="website">Votre site web :</label>
                         <input type="text" id="website" name="_honey" autocomplete="off">
                     </div>
-                    <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_subject" value="Formulaire">
                     <label for="name" class="sr-only">Nom :</label>
                     <input type="text" id="name" name="nom" required placeholder="Nom :">
                     <label for="tel" class="sr-only">Téléphone :</label>
@@ -666,12 +663,6 @@
             body: webhookData,
             keepalive: true
         }).catch(function() {});
-        var p2 = fetch('https://formsubmit.co/ajax/renovexterieur@yahoo.com', {
-            method: 'POST',
-            body: new FormData(form),
-            keepalive: true,
-            headers: { 'Accept': 'application/json' }
-        }).catch(function() {});
         var shown = false;
         var showThanks = function() {
             if (shown) return;
@@ -683,7 +674,7 @@
             }
             if (thanks) thanks.style.display = 'block';
         };
-        Promise.allSettled([p1, p2]).then(showThanks);
+        Promise.allSettled([p1]).then(showThanks);
         setTimeout(showThanks, 3000);
         return false;
     }
